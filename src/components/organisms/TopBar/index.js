@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './style.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./style.css";
 
-import Button from '../../atoms/Button';
-import { MdMenu as Hamburger, MdClose as Close } from 'react-icons/md';
+import Button from "../../atoms/Button";
+import { MdMenu as Hamburger, MdClose as Close } from "react-icons/md";
 
 const TopBar = ({ drawerOpen, toggleDrawer, children }) => {
   return (
@@ -16,7 +16,7 @@ const TopBar = ({ drawerOpen, toggleDrawer, children }) => {
             iconClass="TopBar__Icon"
             onClick={toggleDrawer}
           />
-          <span className="TopBar__Title">Sort Visualizer</span>
+          <span className="TopBar__Title">Sort Simulation</span>
         </section>
         <section className="TopBar__Section TopBar__Section_align_end">
           {children}

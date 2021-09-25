@@ -73,7 +73,7 @@
   font-weight: 500;
   text-decoration: inherit;
   text-transform: inherit;
-
+  color: green;
   padding-left: var(--top-bar-title-left-padding);
   text-overflow: ellipsis;
   white-space: nowrap;
