@@ -1,16 +1,16 @@
-import React from 'react';
-import './style.css';
-import PropTypes from 'prop-types';
+import React from "react";
+import "./style.css";
+import PropTypes from "prop-types";
 
-import Button from '../../atoms/Button';
+import Button from "../../atoms/Button";
 import {
   MdPlayArrow as Play,
   MdPause as Pause,
   MdSkipNext as Forward,
   MdSkipPrevious as Backward,
-  MdRepeat as Repeat
-} from 'react-icons/md';
-import Menu from '../Menu';
+  MdRepeat as Repeat,
+} from "react-icons/md";
+import Menu from "../Menu";
 
 // Helper function
 function isDisabled(action, disabled = false) {
@@ -33,26 +33,26 @@ const VisualizerControls = ({
   backwardDisabled,
   forwardDisabled,
   repeatDisabled,
-  playbackSpeed
+  playbackSpeed,
 }) => {
   return (
     <div className="VisualizerControls">
       {/* Repeat */}
-      <Button
+      {/* <Button
         icon={Repeat}
         onClick={onRepeat}
         disabled={isDisabled(onRepeat, repeatDisabled)}
         className="VisualizerControls__Button"
-      />
+      /> */}
 
       {/* Backward Button  */}
-      <Button
+      {/* <Button
         icon={Backward}
         onClick={onBackward}
         disabled={isDisabled(onBackward, backwardDisabled)}
         iconClass="VisualizerControls__Icon"
         className="VisualizerControls__Button"
-      />
+      /> */}
 
       {/* Play or Pause button - context dependent */}
       <Button
@@ -69,23 +69,15 @@ const VisualizerControls = ({
       />
 
       {/* Forward Button  */}
-      <Button
+      {/* <Button
         icon={Forward}
         onClick={onForward}
         disabled={isDisabled(onForward, forwardDisabled)}
         iconClass="VisualizerControls__Icon"
         className="VisualizerControls__Button"
-      />
+      /> */}
 
       {/* Playback Speed */}
-      <Menu
-        items={['0.25x', '0.5x', '1x', '2x', '4x']}
-        placeholder="Speed"
-        selected={`${playbackSpeed}x`}
-        onSelect={onAdjustSpeed}
-        noDropIcon
-        className="VisualizerControls__SpeedButton"
-      />
     </div>
   );
 };
@@ -104,7 +96,7 @@ VisualizerControls.propTypes = {
   backwardDisabled: PropTypes.bool,
   forwardDisabled: PropTypes.bool,
   repeatDisabled: PropTypes.bool,
-  playbackSpeed: PropTypes.number
+  playbackSpeed: PropTypes.number,
 };
 
 export default VisualizerControls;

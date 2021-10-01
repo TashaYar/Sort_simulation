@@ -8,10 +8,12 @@
 }
 
 .Switch__Label {
+  display: none;
   margin-right: 4px;
 }
 
 .Switch__Button {
+  display: none;
   position: relative;
   width: 48px;
   height: 20px;

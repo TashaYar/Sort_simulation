@@ -21,7 +21,7 @@
   text-align: justify;
   list-style: none;
   background-color: var(--background-color-2);
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .Menu__Header {
