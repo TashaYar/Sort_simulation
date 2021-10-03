@@ -8,7 +8,7 @@ const Footer = (props) => {
         Designed and built with <span className="Footer__Heart">&hearts;</span>{" "}
         by{" "}
         <a
-          href="www.linkedin.com/in/ps-10"
+          href="https://www.linkedin.com/in/ps-10/"
           target="_blank"
           rel="noopener noreferrer"
           className="Footer__Link"

@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './style.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./style.css";
 
-import Bar from '../../atoms/Bar';
+import Bar from "../../atoms/Bar";
 
 const getListOfBars = (
   numbers,
@@ -22,8 +22,7 @@ const getListOfBars = (
     let stateD = groupD.includes(i);
     let sorted = sortedIndices.includes(i);
 
-    let margin =
-      i === numbers.length ? '0' : width > 3 ? '0.5rem' : '0.125rem';
+    let margin = i === numbers.length ? "0" : width > 3 ? "0.5rem" : "0.125rem";
     return (
       <Bar
         key={`${i}_${num}`}
@@ -48,7 +47,7 @@ const SortChart = ({
   groupB,
   groupC,
   groupD,
-  sortedIndices
+  sortedIndices,
 }) => {
   return (
     <div className="SortChart">
@@ -72,7 +71,7 @@ SortChart.propTypes = {
   groupB: PropTypes.arrayOf(PropTypes.number),
   groupC: PropTypes.arrayOf(PropTypes.number),
   groupD: PropTypes.arrayOf(PropTypes.number),
-  sortedIndices: PropTypes.arrayOf(PropTypes.number)
+  sortedIndices: PropTypes.arrayOf(PropTypes.number),
 };
 
 export default SortChart;

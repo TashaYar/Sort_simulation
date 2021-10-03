@@ -1,10 +1,12 @@
 .Bar {
-  background-color: var(--white);
   color: var(--text-color-dark);
   display: flex;
   flex-direction: column reverse;
-  align-items: flex-end;
+  align-items: flex-start;
   transition: 125ms ease-in-out;
+  border: 1px solid #f4f4f4;
+  background: #ffffff;
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
 
 .Bar__Text {
@@ -12,7 +14,7 @@
 }
 
 .Bar_sorted {
-  background-color: var(--primary);
+  background-color: #89ff6a;
 }
 
 .Bar_stateD {
@@ -20,13 +22,13 @@
 }
 
 .Bar_stateC {
-  background-color: var(--red);
+  background-color: #ff2520;
 }
 
 .Bar_stateB {
-  background-color: var(--secondary);
+  background-color: #ffacf4;
 }
 
 .Bar_stateA {
-  background-color: var(--amber);
+  background-color: #fffe20;
 }

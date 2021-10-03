@@ -1,16 +1,18 @@
 .ProgressBar {
-  width: 100%;
+  width: 80%;
   height: 0.375rem;
   border-radius: 4px;
+  /* border: 1px solid black; */
   overflow: hidden;
-  background-color: var(--gray-300);
+  margin: auto;
+  background-color: #f0f0f0;
 }
 
 .ProgressBar__Active {
   height: 100%;
   border-radius: 4px;
   overflow: hidden;
-  background-color: var(--secondary-light);
+  background-color: #89ff6a;
   animation-name: primary-translate;
   animation-duration: 500ms;
 }
@@ -26,12 +28,7 @@
   }
 
   59.15% {
-    animation-timing-function: cubic-bezier(
-      0.302435,
-      0.381352,
-      0.55,
-      0.956352
-    );
+    animation-timing-function: cubic-bezier(0.302435, 0.381352, 0.55, 0.956352);
     transform: translateX(83.67142%);
   }
 

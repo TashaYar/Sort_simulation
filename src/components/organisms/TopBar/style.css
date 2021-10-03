@@ -16,12 +16,15 @@
 
   background-color: var(--background-color-3);
   z-index: 105;
-  box-shadow: var(--elevation-umbra-4) var(--elevation-umbra-color),
-    var(--elevation-penumbra-4) var(--elevation-penumbra-color);
+  box-shadow: var(--elevation-umbra-4) rgb(255 255 255 / 86%),
+    var(--elevation-penumbra-4) rgb(96 96 96 / 14%);
 
   transition: background-color 500ms ease-in-out;
 }
-
+.logo {
+  height: 60px;
+  width: auto;
+}
 /* Default Mobile Styles */
 @media (max-width: 599px) {
   .TopBar {
@@ -29,6 +32,9 @@
     --top-bar-section-vertical-padding: 4px;
     --top-bar-section-horizontal-padding: 4px;
     --top-bar-menu-button-display: inline-block;
+  }
+  .TopBar__Title {
+    margin-left: auto;
   }
 }
 

@@ -29,16 +29,16 @@
   background-color: var(--white);
 }
 .ColorKey__Sorted {
-  background-color: var(--primary-dark);
+  background-color: #89ff6a;
 }
 .ColorKey__GroupA {
-  background-color: var(--amber);
+  background-color: #fffe20;
 }
 .ColorKey__GroupB {
-  background-color: var(--secondary);
+  background-color: #ffacf4;
 }
 .ColorKey__GroupC {
-  background-color: var(--red);
+  background-color: #ff2520;
 }
 .ColorKey__GroupD {
   background-color: var(--blue);
