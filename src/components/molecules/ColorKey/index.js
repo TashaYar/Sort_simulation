@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './style.css';
+import React from "react";
+import PropTypes from "prop-types";
+import "./style.css";
 
 const ColorKey = ({ groupA, groupB, groupC, groupD }) => {
   const keySorted =
@@ -11,8 +11,7 @@ const ColorKey = ({ groupA, groupB, groupC, groupD }) => {
       </div>
     ) : (
       <div className="ColorKey__Item">
-        <div className="ColorKey__Box ColorKey__Unsorted"></div>
-        <span>Unsorted</span>
+        <span></span>
       </div>
     );
 
@@ -59,7 +58,7 @@ ColorKey.propTypes = {
   groupA: PropTypes.string,
   groupB: PropTypes.string,
   groupC: PropTypes.string,
-  groupD: PropTypes.string
+  groupD: PropTypes.string,
 };
 
 export default ColorKey;

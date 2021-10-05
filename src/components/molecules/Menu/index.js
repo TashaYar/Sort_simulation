@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import './style.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import "./style.css";
 
 // Sub components
-import Backdrop from '../../atoms/Backdrop';
+import Backdrop from "../../atoms/Backdrop";
 import {
   MdExpandMore as AngleDown,
-  MdExpandLess as AngleUp
-} from 'react-icons/md';
-import Button from '../../atoms/Button';
+  MdExpandLess as AngleUp,
+} from "react-icons/md";
+import Button from "../../atoms/Button";
 
 const MenuList = ({ open, items, onSelect }) => {
   return open ? (
@@ -30,7 +30,7 @@ const MenuList = ({ open, items, onSelect }) => {
 
 class Menu extends Component {
   state = {
-    open: this.props.open || false
+    open: this.props.open || false,
   };
 
   close = (evt) => {
@@ -44,32 +44,26 @@ class Menu extends Component {
   };
 
   render() {
-    const {
-      className,
-      selected,
-      onSelect,
-      placeholder,
-      items,
-      noDropIcon
-    } = this.props;
+    const { className, selected, onSelect, placeholder, items, noDropIcon } =
+      this.props;
 
     return (
       <div>
         <Backdrop show={this.state.open} onClick={this.close} />
         <div className={`Menu ${className}`}>
-          <header className="Menu__Header">
+          <header className="Menu__Header" onClick={this.toggle}>
             {noDropIcon ? (
               <Button
                 onClick={this.toggle}
                 notCased
-                className={selected ? null : 'Menu__Placeholder'}
+                className={selected ? null : "Menu__Placeholder"}
               >
                 {selected ? selected : placeholder}
               </Button>
             ) : (
               <div
                 className={
-                  selected ? 'Menu__SelectedItem' : 'Menu__Placeholder'
+                  selected ? "Menu__SelectedItem" : "Menu__Placeholder"
                 }
               >
                 {selected ? selected : placeholder}
@@ -102,7 +96,7 @@ Menu.propTypes = {
   onSelect: PropTypes.func,
   placeholder: PropTypes.string,
   items: PropTypes.arrayOf(PropTypes.string),
-  noDropIcon: PropTypes.bool
+  noDropIcon: PropTypes.bool,
 };
 
 export default Menu;

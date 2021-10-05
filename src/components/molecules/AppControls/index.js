@@ -1,19 +1,13 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import "./style.css";
-
-import Button from "../../atoms/Button";
-import Switch from "../../atoms/Switch";
 import Menu from "../../molecules/Menu";
 
 const AppControls = ({
   algorithm,
   onAlgorithmChange,
-  onGenerateRandomArray,
   arraySize,
   onArraySizeChange,
-  onToggleDarkMode,
-  darkMode,
 }) => {
   return (
     <Fragment>
@@ -40,7 +34,7 @@ const AppControls = ({
         />
       </div>
 
-      <Button onClick={onGenerateRandomArray}>Randomize Data</Button>
+      {/* <Button onClick={onGenerateRandomArray}>Randomize Data</Button> */}
     </Fragment>
   );
 };

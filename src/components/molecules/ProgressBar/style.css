@@ -16,7 +16,11 @@
   animation-name: primary-translate;
   animation-duration: 500ms;
 }
-
+@media (max-width: 992px) {
+  .ProgressBar {
+    width: 100%;
+  }
+}
 @keyframes primary-translate {
   0% {
     transform: translateX(0);

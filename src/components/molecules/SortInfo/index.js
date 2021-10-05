@@ -1,19 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './style.css';
-
+import React from "react";
+import PropTypes from "prop-types";
+import "./style.css";
+import welcome from "../SortInfo/Welcome.svg";
 const SortInfo = ({
   title,
   description,
   worstCase,
   avgCase,
   bestCase,
-  space
+  space,
 }) => {
   return (
     <div className="SortInfo">
-      <hr />
-      <h1>{title ? title : 'Select Algorithm'}</h1>
+      <h1>{title ? title : "Bienvenidos!"}</h1>
 
       <div className="SortInfo__Body">
         <article className="SortInfo__Article">
@@ -21,14 +20,18 @@ const SortInfo = ({
             description
           ) : (
             <p>
-              You must select an algorithm before you can visualize it's
-              execution on an array of numbers.
+              <span>
+                <img src={welcome} alt="magic" />
+              </span>
+              Hello! This is a Sorting Algorithm Simulator. You need to select
+              an algorithm to see Magic.
             </p>
           )}
         </article>
 
         <aside className="SortInfo__Aside">
           <h3>Performance</h3>
+          <code>Hi there</code>
           <table>
             <tbody>
               <tr>
@@ -72,7 +75,7 @@ SortInfo.propTypes = {
   worstCase: PropTypes.object,
   avgCase: PropTypes.object,
   bestCase: PropTypes.object,
-  space: PropTypes.object
+  space: PropTypes.object,
 };
 
 export default SortInfo;

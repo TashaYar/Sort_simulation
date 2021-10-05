@@ -15,7 +15,7 @@
   max-height: 80vh;
   padding: 0;
   margin: 0;
-  border-top: 2px solid var(--primary);
+  border-top: 2px solid #5a57cb;
   box-shadow: var(--box-shadow-2);
 
   text-align: justify;
@@ -40,17 +40,17 @@
 
 .Menu__Placeholder {
   color: var(--gray-500);
+  cursor: pointer;
 }
 
 .Menu__Item {
-  border-bottom: 1px solid var(--gray-300);
   padding: 0.75rem;
 }
 
 .Menu__Item:hover,
 .Menu__Item:focus {
-  color: var(--text-color-dark);
-  background-color: var(--primary-light);
+  color: white;
+  background-color: #5a57cb;
   cursor: pointer;
 }
 

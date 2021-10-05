@@ -21,29 +21,25 @@ const VisualizerControls = ({
   // Actions
   onPlay,
   onPause,
-  onBackward,
-  onForward,
+
   onRepeat,
-  onAdjustSpeed,
 
   // States
   playing,
   playDisabled,
   pauseDisabled,
-  backwardDisabled,
-  forwardDisabled,
+
   repeatDisabled,
-  playbackSpeed,
 }) => {
   return (
     <div className="VisualizerControls">
       {/* Repeat */}
-      {/* <Button
+      <Button
         icon={Repeat}
         onClick={onRepeat}
         disabled={isDisabled(onRepeat, repeatDisabled)}
         className="VisualizerControls__Button"
-      /> */}
+      />
 
       {/* Backward Button  */}
       {/* <Button

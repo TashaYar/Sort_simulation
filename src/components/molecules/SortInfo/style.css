@@ -57,6 +57,6 @@
 
   .SortInfo__Aside {
     padding-left: 5ch;
-    border-left: 1px solid var(--text-color);
+    /* border-left: 1px solid var(--text-color); */
   }
 }
