@@ -10,7 +10,16 @@
   display: flex;
   flex-flow: row wrap;
 }
-
+.bien {
+  text-align: center;
+}
+.withnocon {
+  justify-content: center;
+}
+.wel {
+  text-align: center;
+  font-size: 1.5rem;
+}
 .SortInfo__Article {
   width: 50ch;
   line-height: 1.3;

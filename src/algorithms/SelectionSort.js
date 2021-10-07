@@ -1,11 +1,7 @@
-import React from 'react';
-import {
-  swap,
-  newTrace,
-  addToTrace,
-  lastSorted,
-  createKey
-} from './helpers';
+import React from "react";
+import "../algorithms/algo.css";
+
+import { swap, newTrace, addToTrace, lastSorted, createKey } from "./helpers";
 
 const SelectionSort = (nums) => {
   // Initial State
@@ -42,30 +38,59 @@ const SelectionSort = (nums) => {
   return trace;
 };
 
-export const SelectionSortKey = createKey('Comparing', 'Swapping');
+export const SelectionSortKey = createKey("Comparing", "Swapping");
 
 export const SelectionSortDesc = {
-  title: 'Selection Sort',
+  title: "Selection Sort",
   description: (
-    <p>
-      <a
-        href="https://en.wikipedia.org/wiki/Selection_sort"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Selection Sort
-      </a>{' '}
-      is an in-place comparison sorting algorithm that divides the input
-      list into two parts: the sublist of items already sorted, which is
-      built up from left to right at the front (left) of the list, and
-      the sublist of items remaining to be sorted that occupy the rest
-      of the list. Initially, the sorted sublist is empty and the
-      unsorted sublist is the entire input list. The algorithm proceeds
-      by finding the smallest element in the unsorted sublist,
-      exchanging (swapping) it with the leftmost unsorted element
-      (putting it in sorted order), and moving the sublist boundaries
-      one element to the right.
-    </p>
+    <div>
+      <p>
+        The selection sort algorithm sorts an array by repeatedly finding the
+        minimum element (considering ascending order) from unsorted part and
+        putting it at the beginning. The algorithm maintains two subarrays in a
+        given array.
+        <ol>
+          <li>The subarray which is already sorted.</li>
+          <li> Remaining subarray which is unsorted. </li>
+        </ol>
+        In every iteration of selection sort, the minimum element (considering
+        ascending order) from the unsorted subarray is picked and moved to the
+        sorted subarray.
+      </p>
+      <h3>Algorithm Analysis</h3>
+      <div className="time_comp">
+        <table>
+          <tbody>
+            <tr>
+              <td>Worst-case time complexity</td>
+              <td className="oo">
+                O (n<sup>2</sup>)
+              </td>
+            </tr>
+
+            <tr>
+              <td>Average time complexity</td>
+              <td className="oo">
+                {" "}
+                O (n<sup>2</sup>)
+              </td>
+            </tr>
+
+            <tr>
+              <td>Best-case time complexity</td>
+              <td className="oo">
+                O (n<sup>2</sup>)
+              </td>
+            </tr>
+
+            <tr>
+              <td>Space complexity </td>
+              <td className="oo">O (1)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   ),
   worstCase: (
     <span>
@@ -82,7 +107,7 @@ export const SelectionSortDesc = {
       O(n<sup>2</sup>)
     </span>
   ),
-  space: <span>O(1)</span>
+  space: <span>O(1)</span>,
 };
 
 export default SelectionSort;

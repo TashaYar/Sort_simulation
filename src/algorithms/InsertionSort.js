@@ -1,6 +1,6 @@
-import React from 'react';
-import { newTrace, addToTrace, createKey } from './helpers';
-
+import React from "react";
+import { newTrace, addToTrace, createKey } from "./helpers";
+import "../algorithms/algo.css";
 const InsertionSort = (nums) => {
   // Initial State
   const trace = newTrace(nums);
@@ -32,30 +32,54 @@ const InsertionSort = (nums) => {
 };
 
 export const InsertionSortKey = createKey(
-  'Comparing',
-  'Swapping',
-  'Overwrite from memory'
+  "Comparing",
+  "Swapping",
+  "Overwrite from memory"
 );
 export const InsertionSortDesc = {
-  title: 'Insertion Sort',
+  title: "Insertion Sort",
   description: (
-    <p>
-      <a
-        href="https://en.wikipedia.org/wiki/Insertion_sort"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Insertion Sort
-      </a>{' '}
-      is a simple sorting algorithm that iterates through an array and
-      at each iteration it removes one element from the array, finds the
-      location it belongs to in the sorted list and inserts it there,
-      repeating until no elements remain in the unsorted list. It is an
-      in-place, stable sorting algorithm that is inefficient on large
-      input arrays but works well for data sets that are almost sorted.
-      It is more efficient in practice compared to other quadratic
-      sorting algorithms like bubble sort and selection sort.
-    </p>
+    <div>
+      <p>
+        Insertion sort is the sorting mechanism where the sorted array is built
+        having one item at a time. The array elements are compared with each
+        other sequentially and then arranged simultaneously in some particular
+        order. The analogy can be understood from the style we arrange a deck of
+        cards. This sort works on the principle of inserting an element at a
+        particular position, hence the name Insertion Sort.
+      </p>
+      <h3>Algorithm Analysis</h3>
+      <div className="time_comp">
+        <table>
+          <tbody>
+            <tr>
+              <td>Worst-case time complexity</td>
+              <td className="oo">
+                O (n<sup>2</sup>)
+              </td>
+            </tr>
+
+            <tr>
+              <td>Average time complexity</td>
+              <td className="oo">
+                {" "}
+                O (n<sup>2</sup>)
+              </td>
+            </tr>
+
+            <tr>
+              <td>Best-case time complexity</td>
+              <td className="oo">O (n)</td>
+            </tr>
+
+            <tr>
+              <td>Space complexity </td>
+              <td className="oo">O (1)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   ),
   worstCase: (
     <span>
@@ -68,7 +92,7 @@ export const InsertionSortDesc = {
     </span>
   ),
   bestCase: <span>O(n)</span>,
-  space: <span>O(1)</span>
+  space: <span>O(1)</span>,
 };
 
 export default InsertionSort;

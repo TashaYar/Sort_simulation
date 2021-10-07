@@ -12,58 +12,39 @@ const SortInfo = ({
 }) => {
   return (
     <div className="SortInfo">
-      <h1>{title ? title : "Bienvenidos!"}</h1>
+      <h1>{title ? title : <h3 className="bien">Bienvenidos!</h3>}</h1>
 
-      <div className="SortInfo__Body">
+      <div
+        className="SortInfo__Body"
+        style={{ justifyContent: description ? "" : "center" }}
+      >
         <article className="SortInfo__Article">
           {description ? (
             description
           ) : (
-            <p>
+            <div className="withnocon">
               <span>
                 <img src={welcome} alt="magic" />
               </span>
-              Hello! This is a Sorting Algorithm Simulator. You need to select
-              an algorithm to see Magic.
-            </p>
+              <p className="wel">
+                Hello! This is a Sorting Algorithm Simulator. You need to select
+                an algorithm to see Magic.🪄
+              </p>
+            </div>
           )}
         </article>
+        {worstCase ? (
+          <aside className="SortInfo__Aside">
+            <h3>Pseudo Code</h3>
+            <div>
+              <p>Worst-case time complexity</p>
 
-        <aside className="SortInfo__Aside">
-          <h3>Performance</h3>
-          <code>Hi there</code>
-          <table>
-            <tbody>
-              <tr>
-                <td>Worst-case time complexity</td>
-                <td>
-                  <code>{worstCase}</code>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Average time complexity</td>
-                <td>
-                  <code>{avgCase}</code>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Best-case time complexity</td>
-                <td>
-                  <code>{bestCase}</code>
-                </td>
-              </tr>
-
-              <tr>
-                <td>Worst-case space complexity</td>
-                <td>
-                  <code>{space}</code>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </aside>
+              <p>{worstCase}</p>
+            </div>
+          </aside>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

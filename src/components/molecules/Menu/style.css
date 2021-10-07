@@ -11,12 +11,14 @@
   top: 100%;
   left: 0;
   right: 0;
-
+  width: max-content;
   max-height: 80vh;
   padding: 0;
   margin: 0;
   border-top: 2px solid #5a57cb;
-  box-shadow: var(--box-shadow-2);
+  box-shadow: 2px 2px 5px 0px rgba(166, 166, 166, 0.75);
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(166, 166, 166, 0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(166, 166, 166, 0.75);
 
   text-align: justify;
   list-style: none;

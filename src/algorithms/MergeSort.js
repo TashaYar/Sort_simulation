@@ -1,6 +1,6 @@
-import React from 'react';
-import { newTrace, addToTrace, createKey } from './helpers';
-
+import React from "react";
+import { newTrace, addToTrace, createKey } from "./helpers";
+import "../algorithms/algo.css";
 const MergeSort = (nums) => {
   // Initial State
   const trace = newTrace(nums);
@@ -84,38 +84,55 @@ const MergeSort = (nums) => {
 };
 
 export const MergeSortKey = createKey(
-  'Call Merge Sort',
+  "Call Merge Sort",
   null,
-  'Overwrite from axillary array'
+  "Overwrite from axillary array"
 );
 export const MergeSortDesc = {
-  title: 'Merge Sort',
+  title: "Merge Sort",
   description: (
     <div>
       <p>
-        <a
-          href="https://en.wikipedia.org/wiki/Merge_sort"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Merge Sort
-        </a>{' '}
-        is an efficient, stable sorting algorith that makes use of the
-        divide and conquer strategy. Conceptually the algorithm works as
+        Merge Sort is an efficient, stable sorting algorith that makes use of
+        the divide and conquer strategy. Conceptually the algorithm works as
         follows:
       </p>
       <ol>
         <li>
-          Divide the unsorted list into <em>n</em> sublists, each
-          containing one element(a list of one element is considered
-          sorted)
+          Divide the unsorted list into <em>n</em> sublists, each containing one
+          element(a list of one element is considered sorted)
         </li>
         <li>
-          Repeatedly merge sublists to produce new sorted sublists until
-          there is only one sublist remaining. This will be the sorted
-          list.
+          Repeatedly merge sublists to produce new sorted sublists until there
+          is only one sublist remaining. This will be the sorted list.
         </li>
       </ol>
+      <h3>Algorithm Analysis</h3>
+      <div className="time_comp">
+        <table>
+          <tbody>
+            <tr>
+              <td>Worst-case time complexity</td>
+              <td className="oo">O (n log n)</td>
+            </tr>
+
+            <tr>
+              <td>Average time complexity</td>
+              <td className="oo"> O (n log n)</td>
+            </tr>
+
+            <tr>
+              <td>Best-case time complexity</td>
+              <td className="oo">O (n log n)</td>
+            </tr>
+
+            <tr>
+              <td>Space complexity </td>
+              <td className="oo">O (n)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   ),
   worstCase: (
@@ -137,6 +154,6 @@ export const MergeSortDesc = {
     <span>
       O(<em>n</em>)
     </span>
-  )
+  ),
 };
 export default MergeSort;
