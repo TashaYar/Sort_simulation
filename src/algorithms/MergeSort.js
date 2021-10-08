@@ -1,8 +1,9 @@
 import React from "react";
 import { newTrace, addToTrace, createKey } from "./helpers";
 import "../algorithms/algo.css";
+import merge from "../algorithms/merge.png";
+
 const MergeSort = (nums) => {
-  // Initial State
   const trace = newTrace(nums);
 
   function merge(original, start, mid, end) {
@@ -47,15 +48,11 @@ const MergeSort = (nums) => {
   function recursiveMergeSort(original, start, end) {
     const length = end - start;
     if (length < 2) {
-      // original = []
       if (length < 1) return original;
-      // original = [x]
       else return [original[start]];
     }
 
     const midPoint = Math.floor((start + end) / 2);
-
-    // Visualize: First Half
     addToTrace(
       trace,
       original,
@@ -63,8 +60,6 @@ const MergeSort = (nums) => {
       [...Array(midPoint - start).keys()].map((i) => i + start)
     );
     recursiveMergeSort(original, start, midPoint);
-
-    // Visualize: Second Half
     addToTrace(
       trace,
       original,
@@ -77,8 +72,6 @@ const MergeSort = (nums) => {
   }
 
   recursiveMergeSort(nums, 0, nums.length);
-
-  // Visualize: Mark all elements as sorted
   addToTrace(trace, nums, [...Array(nums.length).keys()]);
   return trace;
 };
@@ -137,22 +130,7 @@ export const MergeSortDesc = {
   ),
   worstCase: (
     <span>
-      O(<em>n</em> log <em>n</em>)
-    </span>
-  ),
-  avgCase: (
-    <span>
-      O(<em>n</em> log <em>n</em>)
-    </span>
-  ),
-  bestCase: (
-    <span>
-      O(<em>n</em> log <em>n</em>)
-    </span>
-  ),
-  space: (
-    <span>
-      O(<em>n</em>)
+      <img src={merge} alt="merge" />
     </span>
   ),
 };

@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './style.css';
-import { CSS_CLASSES } from './constants';
+import React from "react";
+import PropTypes from "prop-types";
+import "./style.css";
+import { CSS_CLASSES } from "./constants";
 
 function buildClassNames(rootClass, ClassMappings, userClassName) {
   let classNames = `${rootClass}`;
@@ -20,7 +20,7 @@ const Backdrop = ({ show, opaque, dark, className, onClick }) => {
     {
       [CSS_CLASSES.OPAQUE]: opaque,
       [CSS_CLASSES.DARK]: dark,
-      [CSS_CLASSES.CLICKABLE]: onClick !== undefined
+      [CSS_CLASSES.CLICKABLE]: onClick !== undefined,
     },
     className
   );
@@ -33,6 +33,6 @@ Backdrop.propTypes = {
   opaque: PropTypes.bool,
   dark: PropTypes.bool,
   className: PropTypes.string,
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
 };
 export default Backdrop;

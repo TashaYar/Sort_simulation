@@ -6,8 +6,8 @@ export const newTrace = (array) => {
       groupB: [],
       groupC: [],
       groupD: [],
-      sortedIndices: []
-    }
+      sortedIndices: [],
+    },
   ];
 };
 
@@ -26,7 +26,7 @@ export const addToTrace = (
     groupB: [...groupB],
     groupC: [...groupC],
     groupD: [...groupD],
-    sortedIndices: [...sortedIndices]
+    sortedIndices: [...sortedIndices],
   });
 };
 

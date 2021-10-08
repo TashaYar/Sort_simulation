@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import "./style.css";
 import logo from "../TopBar/sortsimulator.png";
 import Button from "../../atoms/Button";

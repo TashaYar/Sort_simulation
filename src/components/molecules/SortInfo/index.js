@@ -15,10 +15,10 @@ const SortInfo = ({
       <h1>{title ? title : <h3 className="bien">Bienvenidos!</h3>}</h1>
 
       <div
-        className="SortInfo__Body"
+        className="row SortInfo__Body"
         style={{ justifyContent: description ? "" : "center" }}
       >
-        <article className="SortInfo__Article">
+        <article className=" SortInfo__Article">
           {description ? (
             description
           ) : (
@@ -34,11 +34,9 @@ const SortInfo = ({
           )}
         </article>
         {worstCase ? (
-          <aside className="SortInfo__Aside">
+          <aside className=" SortInfo__Aside">
             <h3>Pseudo Code</h3>
             <div>
-              <p>Worst-case time complexity</p>
-
               <p>{worstCase}</p>
             </div>
           </aside>

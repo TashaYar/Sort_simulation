@@ -22,7 +22,7 @@
 
   text-align: justify;
   list-style: none;
-  background-color: var(--background-color-2);
+  background-color: white;
   overflow: hidden;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .Menu__Placeholder {
-  color: var(--gray-500);
+  color: gray;
   cursor: pointer;
 }
 

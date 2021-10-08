@@ -1,9 +1,9 @@
-.ProgressBar {
+/* .ProgressBar {
   width: 80%;
   height: 0.375rem;
   border-radius: 4px;
   /* border: 1px solid black; */
-  overflow: hidden;
+/* overflow: hidden;
   margin: auto;
   background-color: #f0f0f0;
 }
@@ -39,4 +39,4 @@
   100% {
     transform: translateX(200.611057%);
   }
-}
+} */

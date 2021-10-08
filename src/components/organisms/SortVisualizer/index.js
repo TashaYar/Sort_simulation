@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import './style.css';
+import React, { Component } from "react";
+import "./style.css";
 
 // Sub components
-import SortChart from '../SortChart';
-import VisualizerControls from '../../molecules/VisualizerControls';
-import ProgressBar from '../../molecules/ProgressBar';
-import ColorKey from '../../molecules/ColorKey';
-import SortInfo from '../../molecules/SortInfo';
+import SortChart from "../SortChart";
+import VisualizerControls from "../../molecules/VisualizerControls";
+// import ProgressBar from '../../molecules/ProgressBar';
+import ColorKey from "../../molecules/ColorKey";
+import SortInfo from "../../molecules/SortInfo";
 
 class SortVisualizer extends Component {
   state = {
@@ -22,7 +22,7 @@ class SortVisualizer extends Component {
     sortedIndices: [],
 
     timeoutIds: [],
-    playbackSpeed: 1
+    playbackSpeed: 1,
   };
 
   componentDidUpdate(prevProps) {
@@ -47,14 +47,12 @@ class SortVisualizer extends Component {
       groupC: [],
       groupD: [],
       sortedIndices: [],
-      originalArray: [...array]
+      originalArray: [...array],
     });
   };
 
   clearTimeouts = () => {
-    this.state.timeoutIds.forEach((timeoutId) =>
-      clearTimeout(timeoutId)
-    );
+    this.state.timeoutIds.forEach((timeoutId) => clearTimeout(timeoutId));
     this.setState({ timeoutIds: [] });
   };
 
@@ -65,7 +63,7 @@ class SortVisualizer extends Component {
       groupB: visualState.groupB,
       groupC: visualState.groupC,
       groupD: visualState.groupD,
-      sortedIndices: visualState.sortedIndices
+      sortedIndices: visualState.sortedIndices,
     });
   };
 
@@ -79,7 +77,7 @@ class SortVisualizer extends Component {
         (item) => {
           this.setState(
             (prevState) => ({
-              traceStep: prevState.traceStep + 1
+              traceStep: prevState.traceStep + 1,
             }),
             this._changeVisualState(item)
           );
@@ -92,10 +90,7 @@ class SortVisualizer extends Component {
     });
 
     // Clear timeouts upon completion
-    let timeoutId = setTimeout(
-      this.clearTimeouts,
-      trace.length * timer
-    );
+    let timeoutId = setTimeout(this.clearTimeouts, trace.length * timer);
     timeoutIds.push(timeoutId);
 
     this.setState({ timeoutIds });
@@ -115,10 +110,7 @@ class SortVisualizer extends Component {
     const step = this.state.traceStep;
     if (step < trace.length - 1) {
       const item = trace[step + 1];
-      this.setState(
-        { traceStep: step + 1 },
-        this._changeVisualState(item)
-      );
+      this.setState({ traceStep: step + 1 }, this._changeVisualState(item));
     }
   };
 
@@ -127,10 +119,7 @@ class SortVisualizer extends Component {
     const step = this.state.traceStep;
     if (step > 0) {
       const item = trace[step - 1];
-      this.setState(
-        { traceStep: step - 1 },
-        this._changeVisualState(item)
-      );
+      this.setState({ traceStep: step - 1 }, this._changeVisualState(item));
     }
   };
 
@@ -141,7 +130,7 @@ class SortVisualizer extends Component {
       traceStep: -1,
       comparing: [],
       compared: [],
-      sorted: []
+      sorted: [],
     }));
     this.run(this.state.trace);
   };
@@ -149,7 +138,7 @@ class SortVisualizer extends Component {
   adjustPlaybackSpeed = (speed) => {
     const playing = this.state.timeoutIds.length > 0;
     this.pause();
-    const playbackSpeed = Number(speed.split('x')[0]);
+    const playbackSpeed = Number(speed.split("x")[0]);
     this.setState({ playbackSpeed }, () => {
       if (playing) this.continue();
     });
@@ -168,17 +157,15 @@ class SortVisualizer extends Component {
           sortedIndices={this.state.sortedIndices}
         />
 
-        <div className="SortVisualizer__ProgressBar">
+        {/* <div className="SortVisualizer__ProgressBar">
           <ProgressBar
             width={
               this.state.trace.length > 0
-                ? (this.state.traceStep /
-                    (this.state.trace.length - 1)) *
-                  100
+                ? (this.state.traceStep / (this.state.trace.length - 1)) * 100
                 : 0
             }
           />
-        </div>
+        </div> */}
 
         <VisualizerControls
           onPlay={
@@ -197,9 +184,7 @@ class SortVisualizer extends Component {
               this.state.traceStep !== -1) ||
             this.state.trace.length <= 0
           }
-          forwardDisabled={
-            this.state.traceStep >= this.state.trace.length - 1
-          }
+          forwardDisabled={this.state.traceStep >= this.state.trace.length - 1}
           backwardDisabled={this.state.traceStep <= 0}
           repeatDisabled={this.state.traceStep <= 0}
           playbackSpeed={this.state.playbackSpeed}
