@@ -9,26 +9,26 @@
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
 
-.Bar__Text {
+.br-text {
   margin: 0 auto 0.25rem;
 }
 
-.Bar_sorted {
+.br-sort {
   background-color: #89ff6a;
 }
 
-.Bar_stateD {
+.br-D {
   background-color: #65f8f1;
 }
 
-.Bar_stateC {
+.br-C {
   background-color: #ff2520;
 }
 
-.Bar_stateB {
+.br-B {
   background-color: #ffacf4;
 }
 
-.Bar_stateA {
+.br-A {
   background-color: #fffe20;
 }

@@ -48,7 +48,7 @@
 }
 
 /* Elements */
-.Button__Icon {
+.b-icon {
   margin-right: 4px;
   display: inline-block;
   width: 18px;
@@ -58,56 +58,41 @@
 }
 
 /* Modifiers */
-.Button_uppercase {
+.up-b {
   text-transform: uppercase;
 }
 
-.Button_dense {
+.b-den {
   height: var(--button-height-dense);
   font-size: 0.8125rem;
 }
 
-.Button_raised {
+.b-raised {
   color: white;
   background-color: var(--primary);
   position: relative;
 }
 
-.Button_raised:hover,
-.Button_raised:focus {
+.b-raised:hover,
+.b-raised:focus {
   z-index: 4;
-  background-color: var(--primary-dark);
-  box-shadow: var(--elevation-umbra-4) var(--elevation-umbra-color),
-    var(--elevation-penumbra-4) var(--elevation-penumbra-color);
 }
 
-.Button_raised:active {
+.b-raised:active {
   z-index: 8;
-  box-shadow: var(--elevation-umbra-8) var(--elevation-umbra-color),
-    var(--elevation-penumbra-8) var(--elevation-penumbra-color);
 }
 
-.Button_raised:disabled {
+.b-raised:disabled {
   z-index: 0;
-  box-shadow: var(--elevation-umbra-0) var(--elevation-umbra-color),
-    var(--elevation-penumbra-0) var(--elevation-penumbra-color);
 }
 
-.Button_raised:disabled {
-  color: var(--button-disabled-ink-color);
-}
-
-.Button_outlined {
+.b-out {
   border: 1px solid;
 }
 
-.Button_outlined:disabled {
-  border-color: var(--button-disabled-ink-color);
-}
-
-.Button_unelevated,
-.Button_unelevated:hover,
-.Button_unelevated:focus,
-.Button_unelevated:active {
+.unel,
+.unel:hover,
+.unel:focus,
+.unel:active {
   box-shadow: none;
 }

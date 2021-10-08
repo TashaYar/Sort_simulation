@@ -1,5 +1,5 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./style.css";
 
 const Bar = ({
   width,
@@ -10,24 +10,24 @@ const Bar = ({
   stateC,
   stateD,
   sorted,
-  style
+  style,
 }) => {
-  let classNames = 'Bar';
-  if (sorted) classNames += ' Bar_sorted';
-  if (stateD) classNames += ' Bar_stateD';
-  else if (stateC) classNames += ' Bar_stateC';
-  else if (stateB) classNames += ' Bar_stateB';
-  else if (stateA) classNames += ' Bar_stateA';
+  let classNames = "Bar";
+  if (sorted) classNames += " br-sort";
+  if (stateD) classNames += " br-D";
+  else if (stateC) classNames += " br-C";
+  else if (stateB) classNames += " br-B";
+  else if (stateA) classNames += " br-A";
 
   let BarStyle = { ...style, width: `${width}%`, height: `${height}%` };
   if (stateA || stateB || stateC || stateD) {
-    BarStyle['marginRight'] = `${0.3 * width}%`;
-    BarStyle['marginLeft'] = `${0.3 * width}% `;
+    BarStyle["marginRight"] = `${0.3 * width}%`;
+    BarStyle["marginLeft"] = `${0.3 * width}% `;
   }
 
   return (
     <div style={BarStyle} className={classNames}>
-      <span className="Bar__Text">{val}</span>
+      <span className="br-text">{val}</span>
     </div>
   );
 };

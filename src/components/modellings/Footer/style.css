@@ -13,25 +13,24 @@
   transition: background-color 500ms ease-in-out;
 }
 
-.Footer__Items {
+.foot-item {
   flex-grow: 1;
   display: inline-flex;
   justify-content: flex-end;
 }
 
 @media (max-width: 599px) {
-  .Footer__Items {
+  .foot-item {
     flex-flow: column;
     padding: 0.5rem;
   }
 }
 
-.Footer__Items * {
+.foot-item * {
   padding: 0.25rem 1rem;
 }
 
-.Footer__Link {
-  color: var(--text-color);
+.link-foot {
   font-weight: 900;
   text-decoration: none;
 }
@@ -39,6 +38,6 @@
   transform: scale(1.2);
   transition: 0.1s ease-in-out;
 }
-.Footer__Link:hover {
+.link-foot:hover {
   color: rgb(21, 233, 21);
 }

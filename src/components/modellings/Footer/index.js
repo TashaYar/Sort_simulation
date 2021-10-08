@@ -5,11 +5,12 @@ const Footer = (props) => {
   return (
     <footer className="Footer">
       <section>
-        Designed <span className="Footer__Heart"></span> by{" "}
+        Designed <span></span> by{" "}
         <a
           href="https://www.linkedin.com/in/ps-10/"
           target="_blank"
-          className="Footer__Link"
+          rel="noopener noreferrer"
+          className="link-foot"
         >
           Pallavi Singh
         </a>
@@ -17,17 +18,19 @@ const Footer = (props) => {
         <a
           href="https://www.linkedin.com/in/praks03/"
           target="_blank"
-          className="Footer__Link"
+          rel="noopener noreferrer"
+          className="link-foot"
         >
           Prakhar Srivastava
         </a>
       </section>
 
-      <section className="Footer__Items">
+      <section className="foot-item">
         <a
           href="https://github.com/TashaYar/Sort_simulation"
           target="_blank"
-          className="Footer__Link"
+          rel="noopener noreferrer"
+          className="link-foot"
         >
           <img
             className="g"

@@ -6,8 +6,6 @@ import Button from "../../threebees/Button";
 import {
   MdPlayArrow as Play,
   MdPause as Pause,
-  MdSkipNext as Forward,
-  MdSkipPrevious as Backward,
   MdRepeat as Repeat,
 } from "react-icons/md";
 

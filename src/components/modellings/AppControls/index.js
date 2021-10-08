@@ -24,7 +24,7 @@ const AppControls = ({
         onSelect={onAlgorithmChange}
       />
 
-      <div className="AppControls__Size">
+      <div className="size-control">
         <span>Select Size</span>
         <Menu
           placeholder="Array Size"

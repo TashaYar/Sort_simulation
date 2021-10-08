@@ -7,19 +7,19 @@
   padding: 0 8px;
 }
 
-.Switch__Label {
+.switchLabel {
   display: none;
   margin-right: 4px;
 }
 
-.Switch__Button {
+.swiButton {
   display: none;
   position: relative;
   width: 48px;
   height: 20px;
 }
 
-.Switch__Track {
+.switrick {
   position: absolute;
   top: 0;
   width: 32px;
@@ -30,7 +30,7 @@
   transition: 0.25s ease-in-out;
 }
 
-.Switch__Thumb {
+.swithumb {
   display: block;
   width: 20px;
   height: 20px;
@@ -49,10 +49,10 @@
   transition: 500ms ease-out;
 }
 
-.Switch_checked .Switch__Track {
+.swicheck .switrick {
   background-color: var(--primary-dark);
 }
 
-.Switch_checked .Switch__Thumb {
+.swicheck .swithumb {
   margin-left: 24px;
 }

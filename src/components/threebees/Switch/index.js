@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import './style.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import "./style.css";
 
 class Switch extends Component {
   state = {
-    checked: false
+    checked: false,
   };
 
   componentDidMount() {
@@ -31,21 +31,21 @@ class Switch extends Component {
 
   render() {
     let Switch = `Switch`;
-    if (this.state.checked) Switch += ` Switch_checked`;
+    if (this.state.checked) Switch += ` swicheck`;
     if (this.props.className) Switch += ` ${this.props.className}`;
     return (
       <div className={Switch}>
-        <label className="Switch__Label" htmlFor="Switch__Thumb">
+        <label className="switchLabel" htmlFor="swithumb">
           {this.props.label}
         </label>
 
-        <div className="Switch__Button">
-          <div className="Switch__Track"></div>
+        <div className="swiButton">
+          <div className="switrick"></div>
           <input
-            className="Switch__Thumb"
+            className="swithumb"
             onClick={this.handleClick}
-            name="Switch__Thumb"
-            id="Switch__Thumb"
+            name="swithumb"
+            id="swithumb"
             type="button"
           ></input>
         </div>
@@ -56,7 +56,7 @@ class Switch extends Component {
 
 Switch.propTypes = {
   onSwitch: PropTypes.func,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default Switch;

@@ -1,4 +1,4 @@
-.AppControls__Size {
+.size-control {
   display: inline-flex;
   flex-flow: row nowrap;
   align-items: center;

@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './style.css';
-import { CSS_CLASSES } from './constants';
+import React from "react";
+import PropTypes from "prop-types";
+import "./style.css";
+import { CSS_CLASSES } from "./constants";
 
 function buildClassNames(rootClass, ClassMappings, userClassName) {
   let classNames = `${rootClass}`;
@@ -31,7 +31,7 @@ const Button = ({
   iconClass,
   href,
   onClick,
-  children
+  children,
 }) => {
   const classNames = buildClassNames(
     CSS_CLASSES.ROOT,
@@ -40,7 +40,7 @@ const Button = ({
       [CSS_CLASSES.RAISED]: raised,
       [CSS_CLASSES.OUTLINED]: outlined,
       [CSS_CLASSES.UNELEVATED]: unelevated,
-      [CSS_CLASSES.UPPERCASE]: !notCased
+      [CSS_CLASSES.UPPERCASE]: !notCased,
     },
     className
   );
@@ -49,19 +49,15 @@ const Button = ({
     return (
       <a href={href} className={classNames} disabled={disabled}>
         {icon ? renderIcon(icon, iconClass) : null}
-        <span className="Button__Label">{children}</span>
+        <span className="butlab">{children}</span>
       </a>
     );
   }
 
   return (
-    <button
-      onClick={onClick}
-      className={classNames}
-      disabled={disabled}
-    >
+    <button onClick={onClick} className={classNames} disabled={disabled}>
       {icon ? renderIcon(icon, iconClass) : null}
-      <span className="Button__Label">{children}</span>
+      <span className="butlab">{children}</span>
     </button>
   );
 };
@@ -77,7 +73,7 @@ Button.propTypes = {
   icon: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   href: PropTypes.string,
   onClick: PropTypes.func,
-  children: PropTypes.oneOfType([PropTypes.func, PropTypes.node])
+  children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]),
 };
 
 export default Button;

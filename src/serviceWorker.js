@@ -19,7 +19,7 @@ export function register(config) {
       if (isLocalhost) {
         checkValidServiceWorker(swUrl, config);
         navigator.serviceWorker.ready.then(() => {
-          console.log(" " + "");
+          console.log(" ");
         });
       } else {
         registerValidSW(swUrl, config);
@@ -40,7 +40,7 @@ function registerValidSW(swUrl, config) {
         installingWorker.onstatechange = () => {
           if (installingWorker.state === "installed") {
             if (navigator.serviceWorker.controller) {
-              console.log(" " + "");
+              console.log(" ");
 
               if (config && config.onUpdate) {
                 config.onUpdate(registration);

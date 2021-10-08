@@ -11,13 +11,13 @@
 }
 
 /* MODIFIERS */
-.Backdrop_opaque {
+.bk-op {
   opacity: 0.8;
   backdrop-filter: saturate(0.2) blur(5px);
 }
-.Backdrop_dark {
+.bk-d {
   background-color: black;
 }
-.Backdrop_clickable {
+.bk-c {
   cursor: pointer;
 }

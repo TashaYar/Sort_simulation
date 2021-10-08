@@ -8,10 +8,10 @@ const SortInfo = ({ title, description, worstCase }) => {
       <h1>{title ? title : <h3 className="bien">Bienvenidos!</h3>}</h1>
 
       <div
-        className="row SortInfo__Body"
+        className="row infoBody"
         style={{ justifyContent: description ? "" : "center" }}
       >
-        <article className=" SortInfo__Article">
+        <article className=" info-art">
           {description ? (
             description
           ) : (
@@ -27,7 +27,7 @@ const SortInfo = ({ title, description, worstCase }) => {
           )}
         </article>
         {worstCase ? (
-          <aside className=" SortInfo__Aside">
+          <aside className=" aside-info">
             <h3>Pseudo Code</h3>
             <div>
               <p>{worstCase}</p>

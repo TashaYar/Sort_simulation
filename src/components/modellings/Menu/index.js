@@ -12,14 +12,14 @@ import Button from "../../threebees/Button";
 
 const MenuList = ({ open, items, onSelect }) => {
   return open ? (
-    <ul className="Menu__List">
+    <ul className="li-menu">
       {items.map((item, i) => (
         <li
           key={`${item}_${i}`}
           onClick={(evt) => {
             onSelect(evt, item);
           }}
-          className="Menu__Item"
+          className="item-menu"
         >
           {item}
         </li>
@@ -51,21 +51,17 @@ class Menu extends Component {
       <div>
         <Backdrop show={this.state.open} onClick={this.close} />
         <div className={`Menu ${className}`}>
-          <header className="Menu__Header" onClick={this.toggle}>
+          <header className="headmenu" onClick={this.toggle}>
             {noDropIcon ? (
               <Button
                 onClick={this.toggle}
                 notCased
-                className={selected ? null : "Menu__Placeholder"}
+                className={selected ? null : "place-menu"}
               >
                 {selected ? selected : placeholder}
               </Button>
             ) : (
-              <div
-                className={
-                  selected ? "Menu__SelectedItem" : "Menu__Placeholder"
-                }
-              >
+              <div className={selected ? "selectedMenu" : "place-menu"}>
                 {selected ? selected : placeholder}
               </div>
             )}
