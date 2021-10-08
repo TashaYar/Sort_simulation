@@ -130,7 +130,11 @@ export const MergeSortDesc = {
   ),
   worstCase: (
     <span>
-      <img src={merge} alt="merge" />
+      <img
+        src={merge}
+        alt="merge"
+        style={{ width: "-webkit-fill-available" }}
+      />
     </span>
   ),
 };

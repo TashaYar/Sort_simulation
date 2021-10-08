@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import AppControls from "./components/molecules/AppControls";
-import TopBar from "./components/organisms/TopBar";
-import AppDrawer from "./components/organisms/AppDrawer";
-import SortVisualizer from "./components/organisms/SortVisualizer";
-import Footer from "./components/molecules/Footer";
+import AppControls from "./components/modellings/AppControls";
+import TopBar from "./components/sortcontrol/TopBar";
+import AppDrawer from "./components/sortcontrol/AppDrawer";
+import SortVisualizer from "./components/sortcontrol/SortVisualizer";
+import Footer from "./components/modellings/Footer";
 
 import BubbleSort, {
   BubbleSortKey,
@@ -21,12 +21,6 @@ import InsertionSort, {
 } from "./algorithms/InsertionSort";
 import MergeSort, { MergeSortKey, MergeSortDesc } from "./algorithms/MergeSort";
 import QuickSort, { QuickSortKey, QuickSortDesc } from "./algorithms/QuickSort";
-import QuickSort3, {
-  QuickSort3Key,
-  QuickSort3Desc,
-} from "./algorithms/QuickSort3";
-import HeapSort, { HeapSortKey, HeapSortDesc } from "./algorithms/HeapSort";
-import ShellSort, { ShellSortKey, ShellSortDesc } from "./algorithms/ShellSort";
 
 class App extends Component {
   state = {
@@ -44,9 +38,6 @@ class App extends Component {
     "Insertion Sort": InsertionSort,
     "Merge Sort": MergeSort,
     "Quick Sort": QuickSort,
-    "Quick Sort 3": QuickSort3,
-    "Heap Sort": HeapSort,
-    "Shell Sort": ShellSort,
   };
 
   ALGORITHM_KEY = {
@@ -55,9 +46,6 @@ class App extends Component {
     "Insertion Sort": InsertionSortKey,
     "Merge Sort": MergeSortKey,
     "Quick Sort": QuickSortKey,
-    "Quick Sort 3": QuickSort3Key,
-    "Heap Sort": HeapSortKey,
-    "Shell Sort": ShellSortKey,
   };
 
   ALGORITHM_DESC = {
@@ -66,9 +54,6 @@ class App extends Component {
     "Insertion Sort": InsertionSortDesc,
     "Merge Sort": MergeSortDesc,
     "Quick Sort": QuickSortDesc,
-    "Quick Sort 3": QuickSort3Desc,
-    "Heap Sort": HeapSortDesc,
-    "Shell Sort": ShellSortDesc,
   };
 
   componentDidMount() {

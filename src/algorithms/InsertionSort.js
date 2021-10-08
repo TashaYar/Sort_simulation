@@ -74,7 +74,11 @@ export const InsertionSortDesc = {
   ),
   worstCase: (
     <span>
-      <img src={insert} alt="insertion" />
+      <img
+        src={insert}
+        alt="insertion"
+        style={{ width: "-webkit-fill-available" }}
+      />
     </span>
   ),
 };

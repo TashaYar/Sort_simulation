@@ -82,7 +82,11 @@ export const SelectionSortDesc = {
   ),
   worstCase: (
     <span>
-      <img src={select} alt="select" />
+      <img
+        src={select}
+        alt="select"
+        style={{ width: "-webkit-fill-available" }}
+      />
     </span>
   ),
 };

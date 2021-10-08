@@ -1,0 +1,17 @@
+.SortChart {
+  min-height: 218px;
+  height: 40vh;
+  padding-inline: 13rem;
+  padding-block: 1rem;
+  background-color: white;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  transition: 0.75s ease-in-out;
+}
+@media (max-width: 992px) {
+  .SortChart {
+    padding: 1rem;
+  }
+}

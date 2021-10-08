@@ -66,7 +66,11 @@ export const BubbleSortDesc = {
   ),
   worstCase: (
     <span>
-      <img src={bubble} alt="bubble" />
+      <img
+        src={bubble}
+        alt="bubble"
+        style={{ width: "-webkit-fill-available" }}
+      />
     </span>
   ),
 };

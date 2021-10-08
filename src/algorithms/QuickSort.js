@@ -172,7 +172,11 @@ export const QuickSortDesc = {
   ),
   worstCase: (
     <span>
-      <img src={quick} alt="quick" />
+      <img
+        src={quick}
+        alt="quick"
+        style={{ width: "-webkit-fill-available" }}
+      />
     </span>
   ),
 };
